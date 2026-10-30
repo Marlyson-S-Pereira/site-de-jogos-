@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+:root {
+    --bg-color: #0a0f0d;
+    --panel-color: #162019;
+    --panel-alt: #1f2b23;
+    --border-color: #08cb00;
+    --accent-color: #92eeff;
+    --text-color: #eafaf1;
+    --shadow-color: rgba(8, 203, 0, 0.35);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: monospace;
+    background: radial-gradient(circle at top, #141d1a 0%, var(--bg-color) 45%, #050807 100%);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+h1, h2, a {
+    font-family: "Press Start 2P", monospace;
+}
+
+.container {
+    width: min(90vw, 700px);
+    margin: 40px auto;
+    padding: 24px 28px;
+    border: 2px solid var(--border-color);
+    background: linear-gradient(180deg, var(--panel-color), var(--panel-alt));
+    box-shadow: 0 0 25px var(--shadow-color);
+    border-radius: 14px;
+}
+
+img {
+    display: block;
+    width: 200px;
+    height: 150px;
+    background-color: rgb(25, 24, 24);
+    object-fit: contain;
+    border-radius: 10px;
+    border: 2px solid rgba(146, 238, 255, 0.5);
+}
+
+.img-container {
+    width: fit-content;
+    margin: 0 auto 18px;
+    padding: 10px;
+    border-radius: 12px;
+    background: rgba(8, 203, 0, 0.08);
+    border: 1px solid rgba(8, 203, 0, 0.35);
+}
+
+li {
+    list-style: none;
+    margin: 10px 0;
+    padding: 12px 14px;
+    border: 2px solid var(--border-color);
+    border-radius: 10px;
+    background: rgba(8, 203, 0, 0.04);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+li:hover {
+    transform: translateY(-8px);
+    border-color: var(--accent-color);
+    box-shadow: 0 8px 18px rgba(146, 238, 255, 0.15);
+}
+
+a {
+    text-decoration: none;
+    color: #ffffff;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: var(--accent-color);
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 18px 16px;
+    }
+
+    h1, h2, a {
+        letter-spacing: 1px;
+    }
+
+    img {
+        width: 100%;
+        max-width: 200px;
+        height: auto;
+    }
+}
